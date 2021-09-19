@@ -4,37 +4,33 @@ import java.util.Arrays;
 
 public class task4 {
     public static void main(String[] args) {
-        int [] numbers={3,2,8,9,1,5,4,3,7,8,5,9,9};
+        int[] numbers = {3, 2, 8, 9, 1, 5, 4, 3, 7, 8, 5, 9, 9};
+        Arrays.sort(numbers);
+        System.out.println(Arrays.toString(numbers)); //[1, 2, 3, 3, 4, 5, 5, 7, 8, 8, 9, 9, 9]
+        int i,j;
 
-        int highest=0;
-        int secondHighest=0;
-        for(int i=0;i<numbers.length;i++){
-            for(int j=i+1;j<numbers.length;j++) {
-                if(numbers[i]==numbers[j]) {
-                    numbers[i]=0;
+        for (i = numbers.length - 1; i > 0; i--) {
 
-                }}
+            for (j = numbers.length - 2; j > 0; j--) {
 
-                    if (numbers[i] > highest) {
-                        secondHighest = highest;
-                        highest = numbers[i];
-                    } else if (numbers[i] > secondHighest) {
-                        secondHighest = numbers[i];
-                    }
+                if (numbers[i] != numbers[j]) {
 
+                    System.out.println(numbers[j] +" Is second largest number");
+                    break;
 
-
-        }
-        System.out.println(highest);
-        System.out.println(secondHighest);
-        ////////////////////////////////////////////
+                }
+            }
+            break;
 
 
         }
-
-
-
-
-
     }
+}
+
+
+
+
+
+
+
 
